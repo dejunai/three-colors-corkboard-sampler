@@ -14,8 +14,8 @@
   --cork: #8b6914;
   --cork-dark: #6b4e10;
   --cork-light: #a67c1a;
-  --twine: #c4a574;
-  --twine-dark: #8a6a3e;
+  --twine: #c62828;
+  --twine-dark: #7f1010;
   --pin: #8a3030;
   --pin-head: #c9a227;
   --frame: #3a2a1a;
@@ -525,22 +525,23 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 12;
   overflow: visible;
 }
 
 .twine-path {
   fill: none;
   stroke: var(--twine);
-  stroke-width: 2.2;
+  stroke-width: 3.4;
   stroke-linecap: round;
-  filter: drop-shadow(0 1px 0 var(--twine-dark));
-  opacity: 0.92;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.55));
+  opacity: 0.95;
 }
 
 .twine-path.insight {
-  stroke: #b8945a;
-  stroke-width: 2.6;
+  stroke: #8b1515;
+  stroke-width: 4;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.65));
 }
 
 .board {
