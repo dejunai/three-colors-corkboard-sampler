@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Three Colors of Madness — Chapter One Sampler</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Walter Corwin's case file and corkboard — Widow's Bight, 1923. A literary investigation sampler." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to case file</a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <p class="masthead">
+        <span class="dept">Widow's Bight Police Department</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="case">Case File — Rose Garden, 1923</span>
+      </p>
+      <h1 class="title">Three Colors of Madness <em>Chapter One</em></h1>
+      <p class="subtitle">Officer Walter Corwin — notebook &amp; corkboard sampler</p>
+    </div>
+    <div class="toolbar" role="toolbar" aria-label="Case controls">
+      <fieldset class="coat-toggle">
+        <legend class="sr-only">Appearance for witness approaches</legend>
+        <span class="toolbar-label" id="coat-label">Approach as</span>
+        <div class="segmented" role="group" aria-labelledby="coat-label">
+          <button type="button" id="coat-uniform" class="seg active" aria-pressed="true">Uniform / badge</button>
+          <button type="button" id="coat-plain" class="seg" aria-pressed="false">Plain wool coat</button>
+        </div>
+      </fieldset>
+      <button type="button" id="btn-reset" class="btn ghost">Reset board</button>
+    </div>
+  </header>
+
+  <main id="main" class="workspace">
+    <section class="panel notebook" aria-labelledby="notebook-heading">
+      <header class="panel-head">
+        <h2 id="notebook-heading">Case Notebook</h2>
+        <p class="panel-hint">Select an entry to light related pins. Linking on the board writes quiet realizations here.</p>
+      </header>
+      <div id="notebook-scroll" class="notebook-scroll" tabindex="0">
+        <div class="paper-edge" aria-hidden="true"></div>
+        <div id="spine-reveal" class="spine-reveal" hidden aria-live="polite"></div>
+        <div id="insights" class="insights" aria-live="polite"></div>
+        <div id="notebook-entries" class="entries"></div>
+      </div>
+      <footer class="notebook-foot">
+        <p id="spine-status" class="spine-status" aria-live="polite">Spine: 0 of 3 quiet links.</p>
+      </footer>
+    </section>
+
+    <section class="panel corkboard" aria-labelledby="corkboard-heading">
+      <header class="panel-head">
+        <h2 id="corkboard-heading">Corkboard</h2>
+        <p class="panel-hint" id="link-hint">Click a card, then another, to pin twine between them. Esc cancels.</p>
+      </header>
+      <div class="board-wrap">
+        <svg id="twine-layer" class="twine-layer" aria-hidden="true"></svg>
+        <div id="board" class="board" role="list" aria-label="Evidence cards"></div>
+      </div>
+      <footer class="board-foot">
+        <p id="link-status" class="link-status" aria-live="polite">No twine pinned yet.</p>
+      </footer>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>Literary vertical slice — no combat, no meters. Period investigation only.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
